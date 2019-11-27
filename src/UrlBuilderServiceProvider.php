@@ -13,7 +13,7 @@ class UrlBuilderServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Crush\Http\Contracts\UrlBuilder', function($app) {
-            return new UrlBuilder($this->app->make('Crush\Http\Contracts\ParamBuilder'));
+            return new UrlBuilder($this->app->make('Crush\Http\Contracts\ParamsBuilder'));
         });
     }
 
